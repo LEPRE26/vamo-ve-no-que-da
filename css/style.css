@@ -12,5 +12,35 @@ body{
 nav.menu-lateral{
     width: 300px;
     height:100% ;
-   background-color: black; 
+   background-color: rgb(63, 63, 63); 
+   padding: 40px 0 40px 1%; 
 }
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px; 
+}
+.btn-expandir > i{
+    color: white;
+    font-size: 24px;    
+    cursor: pointer;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+
+}
+ul li.item-menu a .txt-link{
+    margin-left: 15px;
+}
+ul li.item-menu a.icon i{
+    font-size: 30px;
+}   
