@@ -1,62 +1,91 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box; /* Corrigido: deve ser border-box em vez de 0 */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
- 
-body{
-    height: 100vh;
-    background-color: #152025;
 
+body {
+    height: 100vh;
+    background: linear-gradient(180deg, #152025 70%, black 30%);
 }
-nav.menu-lateral{
-    width: 300px;
-    height:100% ;
-   background-color: rgb(63, 63, 63); 
-   padding: 40px 0 40px 1%; 
-   position: fixed;
-   top: 0;
-   left: 0;
+
+nav.menu-lateral {
+    width: 65px;
+    height: 100%;
+    background-color: rgb(63, 63, 63);
+    padding: 40px 0 40px 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.4 s;
 }
-.btn-expandir{
+
+nav.menu-lateral.expandir {
+    width: 250px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 10px black;
+}
+
+.btn-expandir {
     width: 100%;
-    padding-left: 10px; 
+    padding-left: 10px;
 }
-.btn-expandir > i{
+
+.btn-expandir > i {
     color: white;
-    font-size: 24px;    
+    font-size: 24px;
     cursor: pointer;
 }
-ul{
+
+ul {
     height: 100%;
     list-style-type: none;
 }
-ul li.item-menu{
+
+ul li.item-menu {
     transition: 0.3s;
 }
-ul li.item-menu :hover{
-    background:  rgb(92, 92, 92);
+
+ul li.active {
+    background-color: #38505c;
+}
+
+ul li.item-menu:hover {
+    background: rgb(92, 92, 92);
     border-radius: 8px;
 }
-ul li.item-menu a{
-    color:#56d57c;
-    text-decoration: solid;
-    font-size: 18px;
-    padding: 16px 4%;
+
+ul li.item-menu a {
+    color: #56d57c;
+    text-decoration: none; /* Corrigido: none em vez de solid */
+    font-size: 15px;
+    padding: 10px 4%;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     line-height: 40px;
+    align-items: center; /* Adicionado para alinhar ícone e texto verticalmente */
+    gap: 10px; /* ESPAÇAMENTO entre ícones e textos */
+}
 
+ul li.item-menu a .txt-link {
+    margin-left: 0; /* Removido margin-left pois agora usamos gap */
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    opacity: 0; /* Esconde o texto inicialmente */
+    transition: opacity 0.3s;
 }
-.txt-link:hover{
-    text-decoration: solid;
-    color: black;
 
+nav.menu-lateral:hover ul li.item-menu a .txt-link {
+    opacity: 1; /* Mostra o texto quando o menu expande */
 }
-.i:hover{
-    color: #00681f;
+
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+    min-width: 30px; /* Garante que o ícone mantenha seu espaço */
+    text-align: center;
 }
-ul li.item-menu a.icon i{
-    font-size: 28px;
-}   
+
+ul li.item-menu:hover a {
+    color: rgb(255, 255, 255);
+}
