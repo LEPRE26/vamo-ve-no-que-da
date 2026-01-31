@@ -11,9 +11,9 @@ item.addEventListener('click',selecLink)
 
 // Menu Lateral Expandir/Retrair
 
-var btnExpandir = Document.querySelector('#btn-expandir')
-var menuSidebar = Document.querySelector('.menu-lateral')
+const btnExpandir = document.querySelector('#btn-expandir');
+const menuSidebar = document.querySelector('.menu-lateral');
 
-btnExpandir.addEventListener('click', function(){
-    menuSidebar.classList.toggle('expandir')
-})
+btnExpandir.addEventListener('click', () => {
+    menuSidebar.classList.toggle('expandir');
+});

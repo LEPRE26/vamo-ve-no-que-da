@@ -50,6 +50,7 @@ ul li.item-menu {
 
 ul li.active {
     background-color: #38505c;
+    border-radius: 8px;
 }
 
 ul li.item-menu:hover {
@@ -88,4 +89,28 @@ ul li.item-menu a .icon > i {
 
 ul li.item-menu:hover a {
     color: rgb(255, 255, 255);
+}
+.page1{
+    background-color: wheat;
+}
+.page2{
+    background-color: rgb(141, 206, 228);
+}
+.interface{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+}
+
+.section1{
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    position: static;
+    top: 0;
+    left: 0;
+align-items: center;
+justify-content: center;
+color: bisque;
 }
