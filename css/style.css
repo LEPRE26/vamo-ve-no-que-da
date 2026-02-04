@@ -1,42 +1,56 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Corrigido: deve ser border-box em vez de 0 */
+    box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
     height: 100vh;
     background: linear-gradient(180deg, #152025 70%, black 30%);
+    margin-left: 65px; /* Adicionado para dar espaço ao menu lateral fixo */
+    transition: margin-left 0.5s; /* Transição suave quando o menu expande */
+}
+
+body.expandir-body {
+    margin-left: 250px; /* Ajusta quando o menu expande */
 }
 
 nav.menu-lateral {
     width: 65px;
-    height: 100%;
-    background-color: rgb(63, 63, 63);
+    height: 100vh;
+    background-color: ;
+    backdrop-filter: blur(50px);
     padding: 40px 0 40px 1%;
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: 0.4 s;
+    transition: width 0.5s;
+    z-index: 1000;
+    
 }
 
 nav.menu-lateral.expandir {
     width: 250px;
-    transition: 0.5s;
     box-shadow: 2px 2px 10px black;
 }
 
 .btn-expandir {
     width: 100%;
     padding-left: 10px;
+    margin-bottom: 20px;
 }
 
 .btn-expandir > i {
     color: white;
     font-size: 24px;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+
+nav.menu-lateral.expandir .btn-expandir > i {
+    transform: rotate(90deg);
 }
 
 ul {
@@ -60,57 +74,59 @@ ul li.item-menu:hover {
 
 ul li.item-menu a {
     color: #56d57c;
-    text-decoration: none; /* Corrigido: none em vez de solid */
+    text-decoration: none;
     font-size: 15px;
     padding: 10px 4%;
     display: flex;
     margin-bottom: 5px;
     line-height: 40px;
-    align-items: center; /* Adicionado para alinhar ícone e texto verticalmente */
-    gap: 10px; /* ESPAÇAMENTO entre ícones e textos */
+    align-items: center;
 }
 
 ul li.item-menu a .txt-link {
-    margin-left: 0; /* Removido margin-left pois agora usamos gap */
-    white-space: nowrap; /* Impede que o texto quebre linha */
-    opacity: 0; /* Esconde o texto inicialmente */
+    margin-left: 20px;
+    white-space: nowrap;
+    opacity: 0;
     transition: opacity 0.3s;
 }
 
-nav.menu-lateral:hover ul li.item-menu a .txt-link {
-    opacity: 1; /* Mostra o texto quando o menu expande */
+nav.menu-lateral.expandir ul li.item-menu a .txt-link {
+    opacity: 1;
 }
 
 ul li.item-menu a .icon > i {
     font-size: 30px;
-    min-width: 30px; /* Garante que o ícone mantenha seu espaço */
+    min-width: 30px;
     text-align: center;
 }
 
 ul li.item-menu:hover a {
     color: rgb(255, 255, 255);
 }
-.page1{
-    background-color: wheat;
-}
-.page2{
-    background-color: rgb(141, 206, 228);
-}
-.interface{
+ /* Interface e seções */
+.interface {
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-
+    position: relative;
 }
 
-.section1{
+.section1, .page0, .page1, .page2 {
     scroll-snap-align: start;
     height: 100vh;
     display: flex;
-    position: static;
-    top: 0;
-    left: 0;
-align-items: center;
-justify-content: center;
-color: bisque;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 3rem;
+    position: relative;
+}
+.page0 {
+    background-color: rgb(72, 77, 72);
+}
+.page1 {
+    background-color: wheat;
+}
+.page2 {
+    background-color: rgb(141, 206, 228);
 }

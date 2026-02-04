@@ -3,63 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <title>Eco.control</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 <body>
     <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="fa-solid fa-list-ul" id="btn-expandir"></i>
+        </div>
 
-     <div class="btn-expandir">
-     <i class="babriojeca-list"><i class="fa-solid fa-ellipsis-vertical" id="btn-expandir"></i>
-     </div><!--btn-expandir-->>
+        <ul>
+            <li class="item-menu active">
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-house-chimney-user"></i></span>
+                    <span class="txt-link">Home</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-ruler"></i></span>
+                    <span class="txt-link">Unidade de medida</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-bell"></i></span>
+                    <span class="txt-link">Notificação</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-wifi"></i></span>
+                    <span class="txt-link">Conexão IoT</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-image-portrait"></i></span>
+                    <span class="txt-link">Cadastro</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-       <ul>
-        <li class="item-menu active">
-            <a href="#">
-              <span class="icon"><i class="fa-solid fa-house-chimney-user"></i></span>
-              <span class="txt-link">Home</span>
-            </a>
-        </li>
-        <li class="item-menu">
-            <a href="#">
-              <span class="icon"><i class="fa-solid fa-ruler"></i></span>
-              <span class="txt-link">Unidade de medida</span>
-            </a>
-        </li>
-        <li class="item-menu">
-            <a href="#">
-              <span class="icon"><i class="fa-solid fa-bell"></i></span>
-              <span class="txt-link">Notificação</span>
-            </a>
-        </li>
-        <li class="item-menu">
-            <a href="#">
-              <span class="icon"><i class="fa-solid fa-wifi"></i></span>
-              <span class="txt-link">Coneção IoT</span>
-            </a>
-        </li>
-        <li class="item-menu">
-            <a href="#">
-              <span class="icon"><i class="fa-solid fa-image-portrait"></i></span>
-              <span class="txt-link">Cadastro</span>
-            </a>
-        </li>
-       </ul>
-    </nav><!--menu-lateral-->>
-  <div class="interface">
-    <section class="page1">
-      <h1>solar</h1>
-    </section>
+    <div class="interface">
+        <section class="page0">
+            <h1 class="t0">Home</h1>
+        </section>
 
-    <section class="page2">
-      <h1>eólica</h1>
-    </section>
-  </div>      
+      
+        <section class="page1">
+            <h1 class="t1">Solar</h1>
+        </section>
 
-  
-    
-    <script src="../js/app.js"></script>
+        <section class="page2">
+            <h1 class="t2"> Hidrica</h1>
+        </section>
+    </div>
+
+<script src="../js/app.js"></script>
 </body>
 </html>
