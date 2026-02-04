@@ -19,7 +19,7 @@ body.expandir-body {
 nav.menu-lateral {
     width: 65px;
     height: 100vh;
-    background-color: ;
+    background: rgba(20, 20, 20, 0.5);
     backdrop-filter: blur(50px);
     padding: 40px 0 40px 1%;
     position: fixed;
@@ -111,7 +111,7 @@ ul li.item-menu:hover a {
     position: relative;
 }
 
-.section1, .page0, .page1, .page2 {
+.section1, .page0, .page1, .page2, .page3 {
     scroll-snap-align: start;
     height: 100vh;
     display: flex;
@@ -125,8 +125,159 @@ ul li.item-menu:hover a {
     background-color: rgb(72, 77, 72);
 }
 .page1 {
-    background-color: wheat;
+    background-color: aliceblue;
 }
 .page2 {
-    background-color: rgb(141, 206, 228);
+    background-color: wheat;
 }
+.page3 {
+    background-color: rgb(179, 179, 255);
+}
+/* monitoramento1 */
+
+.cisterna-card {
+  width: 320px;
+  padding: 16px 20px;
+  border-radius: 24px;
+  color: #031b2f;
+  border-style: solid;
+  border-width: 1px ;
+  border-color:  #505050dc;
+  /* fundo com gradiente + barra de porcentagem */
+  background:
+    linear-gradient(to right, #3a8ab8 75%, #a0a1ad 75%) no-repeat;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cisterna-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.icone1 {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background: #03b4d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.titulo {
+  flex: 1;
+  margin-left: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.percentual {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn, .btn-gerenc1, .btn-info1 {
+  flex: 1;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-info1 {
+  border-style: solid;
+  border-color: #ffffff11;
+  background: rgba(255, 255, 255, 0.281);
+  color: #474747;
+}
+
+.btn-gerenc1 {
+  background: #35c759;
+  color: #ffffff;
+}
+/* solar */
+.solar-card {
+  width: 320px;
+  padding: 16px 20px;
+  border-radius: 24px;
+  color: #031b2f;
+  border-style: solid;
+  border-width: 1px ;
+  border-color:  #505050dc;
+  /* fundo com gradiente + barra de porcentagem */
+  background:
+    linear-gradient(to right, #b6b83a 75%, #c4c4c4 75%) no-repeat;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.solar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.icone2 {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background:#e4e139;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.titulo {
+  flex: 1;
+  margin-left: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.percentual {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn, .btn-gerenc1, .btn-info1 {
+  flex: 1;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-info1 {
+  border-style: solid;
+  border-color: #ffffff11;
+  background: rgba(255, 255, 255, 0.281);
+  color: #474747;
+}
+
+.btn-gerenc1 {
+  background: #35c759;
+  color: #ffffff;
+}
+ 
