@@ -63,49 +63,45 @@
         </ul>
     </nav>
 
-    <div class="interface">
-        <section class="page0">
-            <h1 class="t0">Home</h1>
-        </section>
+    <!-- cadastro -->
 
-       <section class="page1">
-            <h1 class="t1">intro</h1>
-            <div class="cisterna-card">
-  <div class="cisterna-header">
-    <span class="icone1"><i class="fa-solid fa-droplet"></i></span>
-    <span class="titulo">Cisterna</span>
-    <span class="percentual">75%</span>
+    <section class="page4" id="cadastro">
+  <h1 class="t1">Cadastro</h1>
+
+  <div class="cadastro-container">
+    <form class="cadastro-form">
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome">
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite o e-mail">
+      </div>
+
+      <div class="campo">
+        <label for="tipo">Tipo de usuário</label>
+        <select id="tipo" name="tipo">
+          <option value="">Selecione...</option>
+          <option value="admin">Administrador</option>
+          <option value="operador">Operador</option>
+          <option value="visualizador">Visualizador</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Crie uma senha">
+      </div>
+
+      <div class="botoes-cadastro">
+        <button type="reset" class="btn-info1">Limpar</button>
+        <button type="submit" class="btn-gerenc1">Cadastrar</button>
+      </div>
+    </form>
   </div>
-
-  <div class="botoes">
-    <button class="btn-info1">Informações</button>
-    <button class="btn-gerenc1">Gerenciar</button>
-  </div>
-</div>
-
-<div class="solar-card">
-  <div class="solar-header">
-    <span class="icone2"><i class="fa-regular fa-sun"></i></span>
-    <span class="titulo">Placa solar</span>
-    <span class="percentual">75%</span>
-  </div>
-
-  <div class="botoes">
-    <button class="btn-info1">Informações</button>
-    <button class="btn-gerenc1">Gerenciar</button>
-  </div>
-</div>
-
-        </section>
-
-        <section class="page2">
-            <h1 class="t1">Solar</h1>
-        </section>
-
-        <section class="page3">
-            <h1 class="t2"> Hidrica</h1>
-        </section>
-    </div>
+</section>
 
 <script src="../js/app.js"></script>
 </body>

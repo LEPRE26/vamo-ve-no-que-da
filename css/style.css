@@ -6,10 +6,13 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100dvh;
+    min-height: 100vh;
     background: linear-gradient(180deg, #152025 70%, black 30%);
     margin-left: 65px; /* Adicionado para dar espaço ao menu lateral fixo */
     transition: margin-left 0.5s; /* Transição suave quando o menu expande */
+    grid-template-columns: auto 1fr;
+
 }
 
 body.expandir-body {
@@ -103,6 +106,41 @@ ul li.item-menu a .icon > i {
 ul li.item-menu:hover a {
     color: rgb(255, 255, 255);
 }
+
+/* sub menu */
+
+/* submenu dentro do item Configurações */
+/* estado base: fechado, invisível, mas ocupando zero altura */
+.item-menu.has-submenu .submenu {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;            /* ajuste se quiser */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-5px);   /* leve deslocamento para cima */
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* estado aberto: aparece suavemente */
+.item-menu.has-submenu .submenu.open {
+  max-height: 200px;             /* suficiente para 2–3 itens, ajuste se aumentar */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item-menu.has-submenu .submenu .submenu-item a {
+  color: #56d57c;                /* mesma cor dos links do menu */
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding: 4px 0;
+}
+
+
  /* Interface e seções */
 .interface {
     height: 100vh;
@@ -281,3 +319,75 @@ ul li.item-menu:hover a {
   color: #ffffff;
 }
  
+/* cadastro */
+
+/* mesma lógica das outras páginas */
+.page4 {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1rem;
+  position: relative;
+  background-color: aliceblue; /* ou outra cor se quiser diferenciar */
+}
+
+/* título seguindo o padrão .t1/.t0 */
+.page4 .t1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* container central do formulário */
+.cadastro-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  min-width: 320px;
+  max-width: 420px;
+  backdrop-filter: blur(8px);
+}
+
+/* formulário e campos */
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cadastro-form .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cadastro-form label {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #505050dc;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  outline: none;
+}
+
+.cadastro-form input::placeholder {
+  color: #bbbbbb;
+}
+
+/* usa o mesmo visual dos botões .btn-info1 e .btn-gerenc1 */
+.botoes-cadastro {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}

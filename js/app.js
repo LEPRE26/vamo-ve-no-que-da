@@ -27,11 +27,15 @@ btnExpandir.addEventListener('click', () => {
     body.classList.toggle('expandir-body');
 });
 
-//scroll reveal
-// window.sr = ScrollReveal({reset : true});
+// Submenu Expandir/Retrair
 
-//sr.reveal('.t0', {duration:1000, });
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('configuracoes-toggle');
+  const submenu = document.getElementById('configuracoes-submenu');
 
-//sr.reveal('.t1', {duration:1000, });
-
-//sr.reveal('.t2', {duration:1000, });
+  if (toggle && submenu) {
+    toggle.addEventListener('click', () => {
+      submenu.classList.toggle('open');
+    });
+  }
+});
